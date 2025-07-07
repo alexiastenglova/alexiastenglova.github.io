@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 0 20px;
+      color: #333;
+      line-height: 1.5;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0.2rem;
+      color: #555;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Alexia</h1>
+  <p>Test test for the next</p>
+  <p>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> · 
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a> · 
+    <a href="mailto:youremail@example.com">Email</a>
+  </p>
+</body>
+</html>
