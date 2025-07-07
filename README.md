@@ -15,8 +15,16 @@
       background: #f9f9f9;
     }
     header {
-      text-align: center;
-      margin-bottom: 40px;
+      <header style="text-align: center; margin-bottom: 40px;">
+  <img 
+    src="photo.jpg" 
+    alt="Alexia" 
+    style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; display: inline-block;" 
+  />
+  <h1>Your Name</h1>
+  <p class="bio">Product Designer & Photographer based in Amsterdam. Exploring the intersection of tech and creativity.</p>
+</header>
+
     }
     h1 {
       font-weight: 700;
