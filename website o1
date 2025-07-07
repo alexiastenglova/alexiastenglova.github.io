@@ -8,37 +8,63 @@
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       max-width: 600px;
-      margin: 100px auto;
+      margin: 60px auto;
       padding: 0 20px;
       color: #333;
-      line-height: 1.5;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    header {
+      <header style="text-align: center; margin-bottom: 40px;">
+  <img 
+    src="photo.jpg" 
+    alt="Alexia" 
+    style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; display: inline-block;" 
+  />
+  <h1>Your Name</h1>
+  <p class="bio">Product Designer & Photographer based in Amsterdam. Exploring the intersection of tech and creativity.</p>
+</header>
+
     }
     h1 {
       font-weight: 700;
       font-size: 3rem;
-      margin-bottom: 0;
+      margin: 0;
     }
-    p {
-      margin-top: 0.2rem;
+    p.bio {
+      font-size: 1.1rem;
       color: #555;
+      margin-top: 8px;
+    }
+    section.links {
+      margin-top: 40px;
+      text-align: center;
     }
     a {
       color: #0077cc;
       text-decoration: none;
       font-weight: 600;
+      margin: 0 12px;
+      font-size: 1.1rem;
     }
     a:hover {
       text-decoration: underline;
     }
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
   </style>
 </head>
 <body>
-  <h1>Alexia</h1>
-  <p>Test test for the next</p>
-  <p>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> · 
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a> · 
-    <a href="mailto:youremail@example.com">Email</a>
-  </p>
+  <header>
+    <h1>Your Name</h1>
+    <p class="bio">test test for the next, ahoj georgio.</p>
+  </header>
+
+  <hr />
+
+  </section>
 </body>
 </html>
