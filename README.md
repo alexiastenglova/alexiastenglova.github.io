@@ -52,15 +52,11 @@
 <body>
   <header>
     <h1>Your Name</h1>
-    <p class="bio">Product Designer & Photographer based in Amsterdam. Exploring the intersection of tech and creativity.</p>
+    <p class="bio">test test for the next, ahoj georgio.</p>
   </header>
 
   <hr />
 
-  <section class="links">
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    <a href="mailto:youremail@example.com">Email</a>
   </section>
 </body>
 </html>
