@@ -10,14 +10,14 @@
       font-family: 'Helvetica Neue', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #white;
+      background: #fff;
       color: #333;
       display: flex;
     }
 
     nav {
       width: 180px;
-      background-color: #white;
+      background-color: #fff;
       border-right: none;
       height: 100vh;
       padding-top: 30px;
@@ -41,6 +41,8 @@
       text-decoration: none;
       color: #d63384;
       font-size: 1.1rem;
+      font-weight: normal; /* not bold */
+      cursor: pointer;
     }
 
     nav ul li a:hover {
@@ -63,21 +65,31 @@
     }
 
     h1 {
-  position: fixed;
-  bottom: 30px;
-  right: 40px;
-  margin: 0;
-  font-size: 1.2rem;
-  color: #d63384;
-  font-weight: normal;
-  text-align: left;
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      margin: 0;
+      font-size: 1.2rem;
+      color: #d63384;
+      font-weight: normal;
+      text-align: left;
     }
 
-    p.bio {
-      font-size: 1.1rem;
-      color: #555;
-      margin-top: 0;
-      margin-bottom: 40px;
+    .section {
+      display: none;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -87,37 +99,58 @@
   <!-- LEFT MENU -->
   <nav>
     <ul>
-      <li><a href="#about">about</a></li>
-      <li><a href="#photos">photos</a></li>
-      <li><a href="#game">game time</a></li>
+      <li><a onclick="showSection('about')">about</a></li>
+      <li><a onclick="showSection('photos')">photos</a></li>
+      <li><a onclick="showSection('game')">game time</a></li>
     </ul>
   </nav>
 
   <!-- MAIN CONTENT -->
   <div class="main">
-  <div id="photos">
-  <h2>Photos</h2>
 
-  <!-- Album list -->
-  <ul class="album-list">
-    <li><a href="#" onclick="showAlbum('amsterdam')">Amsterdam</a></li>
-    <!-- Add more albums here -->
-  </ul>
+    <!-- About section -->
+    <div id="about" class="section" style="display: block;">
+      <img src="photo.jpg" alt="Main Photo" class="main-photo" />
+    </div>
 
-  <!-- Amsterdam album -->
-  <div class="photo-grid" id="amsterdam" style="display: none;">
-    <img src="photo01.jpg" alt="Amsterdam 1" />
-    <img src="photo02.jpg" alt="Amsterdam 2" />
-    <img src="photo03.jpg" alt="Amsterdam 3" />
-    <img src="photo04.jpg" alt="Amsterdam 3" />
-  </div>
-</div>
+    <!-- Photos section -->
+    <div id="photos" class="section">
+      <h2>Photos</h2>
+      <ul class="album-list">
+        <li><a href="#" onclick="showAlbum('amsterdam')">Amsterdam</a></li>
+      </ul>
+      <div class="photo-grid" id="amsterdam" style="display: none;">
+        <img src="photo01.jpg" alt="Amsterdam 1" />
+        <img src="photo02.jpg" alt="Amsterdam 2" />
+        <img src="photo03.jpg" alt="Amsterdam 3" />
+        <img src="photo04.jpg" alt="Amsterdam 4" />
+      </div>
+    </div>
 
-    <img src="photo.jpg" alt="Main Photo" class="main-photo" />
+    <!-- Game section (empty for now) -->
+    <div id="game" class="section">
+      <h2>Game Time</h2>
+      <p>[Interactive section coming soon]</p>
+    </div>
+
     <h1>Alexia Stenglova</h1>
 
-
   </div>
+
+  <!-- JavaScript to show/hide sections -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showAlbum(albumId) {
+      const albums = document.querySelectorAll('.photo-grid');
+      albums.forEach(album => album.style.display = 'none');
+      document.getElementById(albumId).style.display = 'grid';
+    }
+  </script>
 
 </body>
 </html>
